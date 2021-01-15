@@ -199,7 +199,8 @@ Target.create "Tests" (fun _ ->
 )
 
 Target.create "Release" (fun _ ->
-    DotnetCore.runInRootOrFail "pack"
+    !! "src/*/*.fsproj"
+    |> Seq.iter (DotnetCore.runOrFail "pack")
 
     Directory.ensure "release"
 
