@@ -19,6 +19,26 @@ Add following into `paket.references`
 Lmc.Fable.Profiler
 ```
 
+### Styles
+Add styles to your main `scss` file.
+
+
+```scss
+// Profiler
+@import "../../.fable/Lmc.Fable.Profiler.1.0.0/style.scss";
+```
+
+Or you can copy a style to the `node_modules` and use `~` for accessing it as a npm package
+```
+node_modules/Lmc.Fable.Profiler
+└── style.scss
+```
+
+```scss
+// Profiler
+@import "~Lmc.Fable.Profiler/style.scss";
+```
+
 ## Release
 1. Increment version in `Fable.Profiler.fsproj`
 2. Update `CHANGELOG.md`
