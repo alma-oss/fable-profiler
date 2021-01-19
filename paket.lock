@@ -41,11 +41,11 @@ NUGET
       Fable.React (>= 5.1)
       Fulma (>= 2.3)
   remote: paket-files/git_bitbucket.lmc.cz7999/archi/nuget-server/nuget
-    Lmc.Profiler.Common (1.0.0)
+    Lmc.Profiler.Common (3.0.0)
       FSharp.Core (>= 5.0)
 GIT
   remote: ssh://git@bitbucket.lmc.cz:7999/archi/nuget-server.git
-     (44e6ade4e9604f12b1613c78b50a8e45c3f741ed)
+     (3c8873c35f5f5a7905e530a0144098dc3de572c9)
       path: /nuget/
 GROUP Build
 STORAGE: NONE
