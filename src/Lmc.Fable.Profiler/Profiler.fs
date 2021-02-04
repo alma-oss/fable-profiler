@@ -2,12 +2,15 @@ namespace Lmc.Fable.Profiler
 
 [<RequireQualifiedAccess>]
 module Profiler =
+    open Fable.Core
     open Fable.React
     open Fable.React.Props
     open Fulma.Extensions.Wikiki
 
     open Lmc.Profiler.Common
     open ProfilerModel
+
+    JsInterop.importAll "./style.scss"
 
     let private className: string list -> string = String.concat " "
 
