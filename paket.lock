@@ -32,7 +32,7 @@ NUGET
       Fable.Browser.Dom (>= 2.0.1)
       Fable.Core (>= 3.1.5)
       FSharp.Core (>= 4.7.2)
-    FSharp.Core (5.0)
+    FSharp.Core (5.0.1)
     Fulma (2.10)
       Fable.Core (>= 3.0)
       Fable.React (>= 5.1)
@@ -41,11 +41,11 @@ NUGET
       Fable.React (>= 5.1)
       Fulma (>= 2.3)
   remote: paket-files/git_bitbucket.lmc.cz7999/archi/nuget-server/nuget
-    Lmc.Profiler.Common (3.0.0)
+    Lmc.Profiler.Common (3.1.0)
       FSharp.Core (>= 5.0)
 GIT
   remote: ssh://git@bitbucket.lmc.cz:7999/archi/nuget-server.git
-     (3c8873c35f5f5a7905e530a0144098dc3de572c9)
+     (09740c07ac8e61eb7e8a1d47b56bd3d36bb44e55)
       path: /nuget/
 GROUP Build
 STORAGE: NONE
