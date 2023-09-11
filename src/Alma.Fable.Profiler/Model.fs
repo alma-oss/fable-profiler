@@ -1,8 +1,8 @@
-namespace Lmc.Fable.Profiler
+namespace Alma.Fable.Profiler
 
 module ProfilerModel =
     open Elmish
-    open Lmc.Profiler.Common
+    open Alma.Profiler.Common
 
     type ProfilerModel = {
         Profiler: Profiler.Toolbar option

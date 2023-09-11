@@ -1,4 +1,4 @@
-namespace Lmc.Fable.Profiler
+namespace Alma.Fable.Profiler
 
 [<RequireQualifiedAccess>]
 module Profiler =
@@ -7,7 +7,7 @@ module Profiler =
     open Fable.React.Props
     open Fulma.Extensions.Wikiki
 
-    open Lmc.Profiler.Common
+    open Alma.Profiler.Common
     open ProfilerModel
 
     JsInterop.importAll "./style.scss"
