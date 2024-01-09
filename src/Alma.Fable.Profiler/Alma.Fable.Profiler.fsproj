@@ -1,17 +1,17 @@
 <Project Sdk="Microsoft.NET.Sdk">
     <PropertyGroup>
-        <TargetFramework>net7.0</TargetFramework>
+        <TargetFramework>net8.0</TargetFramework>
         <OutputType>Library</OutputType>
         <PackageId>Alma.Fable.Profiler</PackageId>
         <Version>5.0.0</Version>
-        <PackageProjectUrl>https://bitbucket.lmc.cz/projects/ARCHI/repos/fable-profiler/browse</PackageProjectUrl>
-        <RepositoryUrl>https://github.com/almacareer/prc-fable-profiler</RepositoryUrl>
+        <RepositoryUrl>https://github.com/almacareer/prc-fable-profiler.git</RepositoryUrl>
+        <PackageProjectUrl>https://github.com/almacareer/prc-fable-profiler</PackageProjectUrl>
     </PropertyGroup>
 
     <ItemGroup>
         <Compile Include="AssemblyInfo.fs" />
     </ItemGroup>
-    
+
     <ItemGroup>
         <Compile Include="Model.fs" />
         <Compile Include="Profiler.fs" />
