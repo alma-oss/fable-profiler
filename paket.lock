@@ -1,10 +1,9 @@
 STORAGE: NONE
 RESTRICTION: == net9.0
 NUGET
-  remote: https://nuget.pkg.github.com/almacareer/index.json
-    Alma.Profiler.Common (8.1.0)
-      FSharp.Core (>= 9.0.201 < 10.0)
   remote: https://api.nuget.org/v3/index.json
+    Alma.Profiler.Common (9.0)
+      FSharp.Core (>= 9.0.201 < 10.0)
     Fable.Browser.Blob (1.4)
       Fable.Core (>= 3.2.8)
       FSharp.Core (>= 4.7.2)
@@ -44,7 +43,7 @@ NUGET
     Fable.ReactDom.Types (18.2)
       Fable.React.Types (>= 18.3)
       FSharp.Core (>= 4.7.2)
-    FSharp.Core (9.0.201)
+    FSharp.Core (9.0.303)
     Fulma (3.0)
       Fable.Core (>= 3.7.1)
       Fable.React (>= 9.2)
