@@ -1,5 +1,7 @@
 # AGENTS.md — Alma.Fable.Profiler
 
+This repo ships Agent Skill for the `Alma.Fable.Profiler` library. Compatible agents discover it automatically; see `.agents/skills/fable-profiler/SKILL.md`.
+
 ## Project Purpose
 
 `Alma.Fable.Profiler` is a Fable (F#-to-JavaScript) NuGet library that provides a React-based profiler toolbar UI component for SAFE stack web applications. It renders a Symfony-style debug toolbar showing application info, queries, errors, and resource details using Elmish architecture and Fulma (Bulma CSS) components.
