@@ -617,10 +617,8 @@ div.sf-toolbar .sf-toolbar-block a:hover {
 }
 
 /***** Override tooltip inside a profiler. *****/
-
-[data-tooltip]:not(.is-loading).has-tooltip-multiline::before,
-[data-tooltip]:not(.is-disabled).has-tooltip-multiline::before,
-[data-tooltip]:not([disabled]).has-tooltip-multiline::before {
+.sf-toolbar .tooltip::before {
     width: 40rem;
     max-width: 40rem;
+    white-space: normal;
 }

@@ -2,12 +2,12 @@
 
 ## Project Purpose
 
-`Alma.Fable.Profiler` is a Fable (F#-to-JavaScript) NuGet library that provides a React-based profiler toolbar UI component for SAFE stack web applications. It renders a Symfony-style debug toolbar showing application info, queries, errors, and resource details using Elmish architecture and Fulma (Bulma CSS) components.
+`Alma.Fable.Profiler` is a Fable (F#-to-JavaScript) NuGet library that provides a React-based profiler toolbar UI component for SAFE stack web applications. It renders a Symfony-style debug toolbar showing application info, queries, errors, and resource details using Elmish architecture and Feliz + Feliz.DaisyUI components.
 
 ## Tech Stack
 
 - **Language:** F# (.NET 10) compiled to JavaScript via Fable
-- **UI framework:** Fable.React + Fulma (Bulma CSS bindings) + Elmish
+- **UI framework:** Feliz + Feliz.DaisyUI (Tailwind/daisyUI bindings) + Elmish
 - **Package manager:** Paket
 - **Build system:** FAKE (F# Make) via `build.sh`
 - **NuGet package:** `Alma.Fable.Profiler`
@@ -16,11 +16,11 @@
 ## Key Dependencies
 
 - `FSharp.Core ~> 10.0`
-- `Fable.Core ~> 4` — Fable compiler core
-- `Fable.Elmish ~> 4` — Elm architecture for F#/Fable
-- `Fable.Elmish.React ~> 4` — React bindings for Elmish
-- `Fulma ~> 3` — Bulma CSS framework bindings
-- `Fulma.Extensions.Wikiki.Tooltip ~> 4` — tooltip extension
+- `Fable.Core ~> 5` — Fable compiler core
+- `Fable.Elmish ~> 5` — Elm architecture for F#/Fable
+- `Fable.Elmish.React ~> 5` — React bindings for Elmish
+- `Feliz ~> 3` — React DSL for Fable
+- `Feliz.DaisyUI ~> 5` — daisyUI (Tailwind) component bindings, used here for the tooltip
 - `Alma.Profiler.Common ~> 10.0` — shared profiler types (`Profiler.Toolbar`, `Profiler.Item`, `Profiler.DetailItem`, etc.)
 
 ## Commands
@@ -65,7 +65,7 @@ dotnet paket install
    - `Profiler.view refreshProfiler model` — main render function
    - Renders each `Profiler.Item` as a toolbar block with icon, label, value, unit, and expandable detail panel
    - Detail items support: short labels, tooltips, color coding (Green/Yellow/Red/Gray), links
-   - Uses Fulma `Tooltip` extension for hover details
+   - Uses Feliz.DaisyUI `Daisy.tooltip`/`tooltip` for hover details
 
 ### Visual Structure
 
@@ -109,3 +109,5 @@ dotnet paket install
 - **Fable content packaging** — `.fsproj` includes `*.fsproj; *.fs; *.scss;` as `Content` with `PackagePath="fable\"`
 - **Paket.Restore.targets path** — uses `..\..\` relative path since the project is nested under `src/Alma.Fable.Profiler/`
 - **Companion library** — this is the client-side counterpart of `fprofiler` (server-side); they share types via `Alma.Profiler.Common`
+- **npm dependencies via Femto** — `.fsproj` `NpmDependencies` declares `tailwindcss` 4 and `daisyui` 5 as dev dependencies; Feliz 3 itself declares React 19. Femto installs packages only — consumers still wire the Tailwind bundler plugin and `@plugin "daisyui"` themselves
+- **Tailwind content scanning** — consuming apps must point Tailwind at this package's Fable output, or daisyUI purges the `tooltip*` classes since they never appear in the app's own source. `@source` resolves relative to the CSS entry file and the right path depends on the app's Fable `outDir` (e.g. `@source "../output/fable_modules";`); `@source inline("tooltip tooltip-top tooltip-info tooltip-success tooltip-error");` pins the classes directly and avoids the path dependency

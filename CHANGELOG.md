@@ -4,6 +4,8 @@
 ## Unreleased
 
 - Update dependencies
+- [**BC**] Replace Fulma with Feliz 3 and Feliz.DaisyUI; tooltips now need Tailwind CSS + daisyUI in the consuming app instead of bulma-tooltip; requires Fable 5 and React 19 (via Feliz 3)
+- Declare `tailwindcss` and `daisyui` npm dev dependencies for Femto
 
 ## 9.0.1 - 2026-02-10
 - Downgrade dependencies

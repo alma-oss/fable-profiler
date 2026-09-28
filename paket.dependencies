@@ -8,8 +8,8 @@ nuget FSharp.Core ~> 10.0
 nuget Fable.Core ~> 5
 nuget Fable.Elmish ~> 5
 nuget Fable.Elmish.React ~> 5
-nuget Fulma ~> 3
-nuget Fulma.Extensions.Wikiki.Tooltip ~> 4
+nuget Feliz ~> 3
+nuget Feliz.DaisyUI ~> 5
 
 nuget Alma.Profiler.Common ~> 10.0
 
