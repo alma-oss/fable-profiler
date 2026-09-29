@@ -2,12 +2,12 @@
 
 ## Project Purpose
 
-`Alma.Fable.Profiler` is a Fable (F#-to-JavaScript) NuGet library that provides a React-based profiler toolbar UI component for SAFE stack web applications. It renders a Symfony-style debug toolbar showing application info, queries, errors, and resource details using Elmish architecture and Fulma (Bulma CSS) components.
+`Alma.Fable.Profiler` is a Fable (F#-to-JavaScript) NuGet library that provides a React-based profiler toolbar UI component for SAFE stack web applications. It renders a Symfony-style debug toolbar showing application info, queries, errors, and resource details using Elmish architecture and Fable.React.
 
 ## Tech Stack
 
 - **Language:** F# (.NET 10) compiled to JavaScript via Fable
-- **UI framework:** Fable.React + Fulma (Bulma CSS bindings) + Elmish
+- **UI framework:** Fable.React + Elmish, plain SCSS (no CSS framework)
 - **Package manager:** Paket
 - **Build system:** FAKE (F# Make) via `build.sh`
 - **NuGet package:** `Alma.Fable.Profiler`
@@ -19,8 +19,7 @@
 - `Fable.Core ~> 4` — Fable compiler core
 - `Fable.Elmish ~> 4` — Elm architecture for F#/Fable
 - `Fable.Elmish.React ~> 4` — React bindings for Elmish
-- `Fulma ~> 3` — Bulma CSS framework bindings
-- `Fulma.Extensions.Wikiki.Tooltip ~> 4` — tooltip extension
+- `Fable.React ~> 9` — React bindings
 - `Alma.Profiler.Common ~> 10.0` — shared profiler types (`Profiler.Toolbar`, `Profiler.Item`, `Profiler.DetailItem`, etc.)
 
 ## Commands
@@ -65,7 +64,7 @@ dotnet paket install
    - `Profiler.view refreshProfiler model` — main render function
    - Renders each `Profiler.Item` as a toolbar block with icon, label, value, unit, and expandable detail panel
    - Detail items support: short labels, tooltips, color coding (Green/Yellow/Red/Gray), links
-   - Uses Fulma `Tooltip` extension for hover details
+   - Tooltips are pure CSS in `style.scss` (`profiler-tooltip`, `profiler-tooltip-*`, `data-profiler-tooltip`), scoped under `.sf-toolbar`; the unique names keep consumer frameworks (Bulma/bulma-tooltip, daisyUI `.tooltip`) from styling them
 
 ### Visual Structure
 
