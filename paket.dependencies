@@ -5,9 +5,9 @@ storage:none
 
 nuget FSharp.Core ~> 10.0
 
-nuget Fable.Core ~> 4
-nuget Fable.Elmish ~> 4
-nuget Fable.Elmish.React ~> 4
+nuget Fable.Core ~> 5
+nuget Fable.Elmish ~> 5
+nuget Fable.Elmish.React ~> 5
 nuget Fulma ~> 3
 nuget Fulma.Extensions.Wikiki.Tooltip ~> 4
 
