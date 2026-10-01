@@ -616,11 +616,85 @@ div.sf-toolbar .sf-toolbar-block a:hover {
     }
 }
 
-/***** Override tooltip inside a profiler. *****/
+/***** Tooltip *****/
+$tooltip-background: rgba(74, 74, 74, 0.9);
+$tooltip-arrow-size: 6px;
+$tooltip-colors: (
+    "info": #3E8ED0,
+    "success": #48C78E,
+    "danger": #F14668,
+);
 
-[data-tooltip]:not(.is-loading).has-tooltip-multiline::before,
-[data-tooltip]:not(.is-disabled).has-tooltip-multiline::before,
-[data-tooltip]:not([disabled]).has-tooltip-multiline::before {
-    width: 40rem;
-    max-width: 40rem;
+.sf-toolbar .profiler-tooltip {
+    position: relative;
+
+    &::before,
+    &::after {
+        box-sizing: border-box;
+        position: absolute;
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        transition: opacity 86ms linear, visibility 86ms linear;
+        z-index: 100001;
+    }
+
+    &::before {
+        content: attr(data-profiler-tooltip);
+        padding: 0.5rem 1rem;
+        border-radius: 2px;
+        background: $tooltip-background;
+        color: #FFF;
+        font: 12px/1.4 Arial, sans-serif;
+        font-weight: normal;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    &::after {
+        content: "";
+        border: $tooltip-arrow-size solid transparent;
+    }
+
+    &:hover::before,
+    &:hover::after {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    &.profiler-tooltip-top {
+        &::before {
+            bottom: 100%;
+            left: 50%;
+            transform: translate(-50%, -$tooltip-arrow-size);
+        }
+
+        &::after {
+            bottom: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            border-top-color: $tooltip-background;
+            border-bottom-width: 0;
+        }
+    }
+
+    &.profiler-tooltip-multiline::before {
+        width: 40rem;
+        max-width: 40rem;
+        text-align: left;
+        text-overflow: clip;
+        white-space: normal;
+        word-break: keep-all;
+    }
+
+    @each $name, $color in $tooltip-colors {
+        &.profiler-tooltip-#{$name}::before {
+            background: rgba($color, 0.9);
+        }
+
+        &.profiler-tooltip-top.profiler-tooltip-#{$name}::after {
+            border-top-color: rgba($color, 0.9);
+        }
+    }
 }

@@ -9,6 +9,9 @@
         <PackageLicenseExpression>MIT</PackageLicenseExpression>
         <RepositoryUrl>https://github.com/alma-oss/fable-profiler.git</RepositoryUrl>
         <PackageProjectUrl>https://github.com/alma-oss/fable-profiler</PackageProjectUrl>
+        <NpmDependencies>
+            <NpmPackage Name="sass" Version="gte 1.0.0 lt 2.0.0" ResolutionStrategy="Max" DevDependency="true" />
+        </NpmDependencies>
     </PropertyGroup>
 
     <ItemGroup>

@@ -16,6 +16,10 @@ Add following into `paket.references`
 Alma.Fable.Profiler
 ```
 
+The toolbar styles ship as `style.scss` and are imported by the Fable output, so the consuming
+app's bundler must compile SCSS. Femto installs the `sass` npm package declared by this library;
+Vite picks it up without further config, webpack needs `sass-loader` + `css-loader` + `style-loader`.
+
 ## Release
 1. Increment version in `Alma.Fable.Profiler.fsproj`
 2. Update `CHANGELOG.md`

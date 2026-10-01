@@ -5,7 +5,6 @@ module Profiler =
     open Fable.Core
     open Fable.React
     open Fable.React.Props
-    open Fulma.Extensions.Wikiki
 
     open Alma.Profiler.Common
     open ProfilerModel
@@ -21,11 +20,28 @@ module Profiler =
         | Some Profiler.Gray -> "sf-toolbar-status sf-toolbar-status-norma"
         | _ -> ""
 
+    [<RequireQualifiedAccess>]
+    module private Tooltip =
+        let [<Literal>] ClassName = "profiler-tooltip"
+        let [<Literal>] IsTooltipTop = "profiler-tooltip-top"
+        let [<Literal>] IsMultiline = "profiler-tooltip-multiline"
+        let [<Literal>] IsInfo = "profiler-tooltip-info"
+        let [<Literal>] IsSuccess = "profiler-tooltip-success"
+        let [<Literal>] IsDanger = "profiler-tooltip-danger"
+
+        let dataTooltip d = Data ("profiler-tooltip", d)
+
     let private tooltipColor = function
-        | Some Profiler.Yellow -> Tooltip.IsInfo
-        | Some Profiler.Green -> Tooltip.IsSuccess
-        | Some Profiler.Red -> Tooltip.IsDanger
+        | Some Profiler.Yellow -> "sf-tooltip-info"
+        | Some Profiler.Green -> "sf-tooltip-success"
+        | Some Profiler.Red -> "sf-tooltip-danger"
         | _ -> ""
+
+    let private tooltip text classes : IHTMLProp list =
+        [
+            Data ("sf-tooltip", text)
+            Class (className ("sf-tooltip" :: classes))
+        ]
 
     let private infoGroupPiece ({ ShortLabel = shortLabel; Label = (Profiler.Label label); Value = (Profiler.Value value); Detail = detail; Color = color; Link = link }: Profiler.DetailItem) =
         div [ Class "sf-toolbar-info-piece" ] [
@@ -41,29 +57,13 @@ module Profiler =
 
             match shortLabelValue with
             | Some shortLabel ->
-                b [
-                    Tooltip.dataTooltip label
-                    Class (className [
-                        Tooltip.ClassName
-                        Tooltip.IsTooltipTop
-                        Tooltip.IsMultiline
-                        color |> tooltipColor
-                    ])
-                ] [ link shortLabel ]
+                b (tooltip label [ color |> tooltipColor ]) [ link shortLabel ]
             | _ -> b [] [ link label ]
 
             let valueSpan =
                 match detail with
                 | Some (Profiler.ValueDetail detail) ->
-                    span [
-                        Tooltip.dataTooltip detail
-                        Class (className [
-                            Tooltip.ClassName
-                            Tooltip.IsTooltipTop
-                            Tooltip.IsMultiline
-                            color |> statusColor
-                        ])
-                    ]
+                    span (tooltip detail [ color |> statusColor ])
                 | _ -> span [ Class (color |> statusColor) ]
 
             valueSpan [ str value ]

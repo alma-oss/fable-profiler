@@ -2,6 +2,5 @@ FSharp.Core
 Fable.Core
 Fable.Elmish
 Fable.Elmish.React
-Fulma
-Fulma.Extensions.Wikiki.Tooltip
+Fable.React
 Alma.Profiler.Common

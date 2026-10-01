@@ -3,7 +3,9 @@
 <!-- There is always Unreleased section on the top. Subsections (Add, Changed, Fix, Removed) should be Add as needed. -->
 ## Unreleased
 
+- [**BC**] Replace Fulma and `Fulma.Extensions.Wikiki.Tooltip` with a self-contained tooltip styled in `style.scss`; consumer apps no longer need `bulma-tooltip`
 - Update dependencies
+- Declare `sass` npm dev dependency for Femto
 
 ## 9.0.1 - 2026-02-10
 - Downgrade dependencies
