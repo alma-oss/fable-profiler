@@ -1,0 +1,113 @@
+lockfile_version: '1'
+dependencies: []
+deployments:
+- kind: project-relative
+  target: claude
+  value: .claude/skills/fable-profiler
+  runtime: null
+  scope: project
+  owners:
+  - .
+  active_owner: .
+  content_hash: null
+- kind: project-relative
+  target: claude
+  value: .claude/skills/fable-profiler/SKILL.md
+  runtime: null
+  scope: project
+  owners:
+  - .
+  active_owner: .
+  content_hash: sha256:ccc83f706ac4e86bb50dddc658eb0953f8f298b9e802517767e89c8b556e6aa5
+- kind: project-relative
+  target: claude
+  value: .claude/skills/fable-profiler/references/anti-patterns.md
+  runtime: null
+  scope: project
+  owners:
+  - .
+  active_owner: .
+  content_hash: sha256:2df2e321dd7d2a0d151332f2754f82d41f570667292f068a71a86797e4f8dd83
+- kind: project-relative
+  target: claude
+  value: .claude/skills/fable-profiler/references/examples.md
+  runtime: null
+  scope: project
+  owners:
+  - .
+  active_owner: .
+  content_hash: sha256:d0d23bb19a512086f90e9a524b1ee31ece3d8a40c160d427ba4c1302f8328ae3
+- kind: project-relative
+  target: claude
+  value: .claude/skills/fable-profiler/references/preferred-patterns.md
+  runtime: null
+  scope: project
+  owners:
+  - .
+  active_owner: .
+  content_hash: sha256:c213ba3e0c581979520e16b2d93e118087b839ebbbfc307692c8c4e1fa88566b
+- kind: project-relative
+  target: legacy
+  value: .agents/skills/fable-profiler
+  runtime: null
+  scope: project
+  owners:
+  - .
+  active_owner: .
+  content_hash: null
+- kind: project-relative
+  target: legacy
+  value: .agents/skills/fable-profiler/SKILL.md
+  runtime: null
+  scope: project
+  owners:
+  - .
+  active_owner: .
+  content_hash: sha256:ccc83f706ac4e86bb50dddc658eb0953f8f298b9e802517767e89c8b556e6aa5
+- kind: project-relative
+  target: legacy
+  value: .agents/skills/fable-profiler/references/anti-patterns.md
+  runtime: null
+  scope: project
+  owners:
+  - .
+  active_owner: .
+  content_hash: sha256:2df2e321dd7d2a0d151332f2754f82d41f570667292f068a71a86797e4f8dd83
+- kind: project-relative
+  target: legacy
+  value: .agents/skills/fable-profiler/references/examples.md
+  runtime: null
+  scope: project
+  owners:
+  - .
+  active_owner: .
+  content_hash: sha256:d0d23bb19a512086f90e9a524b1ee31ece3d8a40c160d427ba4c1302f8328ae3
+- kind: project-relative
+  target: legacy
+  value: .agents/skills/fable-profiler/references/preferred-patterns.md
+  runtime: null
+  scope: project
+  owners:
+  - .
+  active_owner: .
+  content_hash: sha256:c213ba3e0c581979520e16b2d93e118087b839ebbbfc307692c8c4e1fa88566b
+local_deployed_files:
+- .agents/skills/fable-profiler
+- .agents/skills/fable-profiler/SKILL.md
+- .agents/skills/fable-profiler/references/anti-patterns.md
+- .agents/skills/fable-profiler/references/examples.md
+- .agents/skills/fable-profiler/references/preferred-patterns.md
+- .claude/skills/fable-profiler
+- .claude/skills/fable-profiler/SKILL.md
+- .claude/skills/fable-profiler/references/anti-patterns.md
+- .claude/skills/fable-profiler/references/examples.md
+- .claude/skills/fable-profiler/references/preferred-patterns.md
+local_deployed_file_hashes:
+  .agents/skills/fable-profiler/SKILL.md: sha256:ccc83f706ac4e86bb50dddc658eb0953f8f298b9e802517767e89c8b556e6aa5
+  .agents/skills/fable-profiler/references/anti-patterns.md: sha256:2df2e321dd7d2a0d151332f2754f82d41f570667292f068a71a86797e4f8dd83
+  .agents/skills/fable-profiler/references/examples.md: sha256:d0d23bb19a512086f90e9a524b1ee31ece3d8a40c160d427ba4c1302f8328ae3
+  .agents/skills/fable-profiler/references/preferred-patterns.md: sha256:c213ba3e0c581979520e16b2d93e118087b839ebbbfc307692c8c4e1fa88566b
+  .claude/skills/fable-profiler/SKILL.md: sha256:ccc83f706ac4e86bb50dddc658eb0953f8f298b9e802517767e89c8b556e6aa5
+  .claude/skills/fable-profiler/references/anti-patterns.md: sha256:2df2e321dd7d2a0d151332f2754f82d41f570667292f068a71a86797e4f8dd83
+  .claude/skills/fable-profiler/references/examples.md: sha256:d0d23bb19a512086f90e9a524b1ee31ece3d8a40c160d427ba4c1302f8328ae3
+  .claude/skills/fable-profiler/references/preferred-patterns.md: sha256:c213ba3e0c581979520e16b2d93e118087b839ebbbfc307692c8c4e1fa88566b
