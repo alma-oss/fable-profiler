@@ -32,15 +32,15 @@ module Profiler =
         let dataTooltip d = Data ("profiler-tooltip", d)
 
     let private tooltipColor = function
-        | Some Profiler.Yellow -> "sf-tooltip-info"
-        | Some Profiler.Green -> "sf-tooltip-success"
-        | Some Profiler.Red -> "sf-tooltip-danger"
+        | Some Profiler.Yellow -> Tooltip.IsInfo
+        | Some Profiler.Green -> Tooltip.IsSuccess
+        | Some Profiler.Red -> Tooltip.IsDanger
         | _ -> ""
 
     let private tooltip text classes : IHTMLProp list =
         [
-            Data ("sf-tooltip", text)
-            Class (className ("sf-tooltip" :: classes))
+            Tooltip.dataTooltip text
+            Class (className (Tooltip.ClassName :: Tooltip.IsTooltipTop :: Tooltip.IsMultiline :: classes))
         ]
 
     let private infoGroupPiece ({ ShortLabel = shortLabel; Label = (Profiler.Label label); Value = (Profiler.Value value); Detail = detail; Color = color; Link = link }: Profiler.DetailItem) =
