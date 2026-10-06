@@ -16,9 +16,9 @@
 ## Key Dependencies
 
 - `FSharp.Core ~> 10.0`
-- `Fable.Core ~> 4` — Fable compiler core
-- `Fable.Elmish ~> 4` — Elm architecture for F#/Fable
-- `Fable.Elmish.React ~> 4` — React bindings for Elmish
+- `Fable.Core ~> 5` — Fable compiler core
+- `Fable.Elmish ~> 5` — Elm architecture for F#/Fable
+- `Fable.Elmish.React ~> 5` — React bindings for Elmish
 - `Fable.React ~> 9` — React bindings
 - `Alma.Profiler.Common ~> 10.0` — shared profiler types (`Profiler.Toolbar`, `Profiler.Item`, `Profiler.DetailItem`, etc.)
 

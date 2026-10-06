@@ -2,6 +2,7 @@
 
 <!-- There is always Unreleased section on the top. Subsections (Add, Changed, Fix, Removed) should be Add as needed. -->
 ## Unreleased
+- Fix toolbar tooltips rendering unstyled
 
 ## 10.0.0 - 2026-10-01
 - [**BC**] Replace Fulma and `Fulma.Extensions.Wikiki.Tooltip` with a self-contained tooltip styled in `style.scss`; consumer apps no longer need `bulma-tooltip`
