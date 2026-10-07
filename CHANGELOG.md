@@ -2,6 +2,8 @@
 
 <!-- There is always Unreleased section on the top. Subsections (Add, Changed, Fix, Removed) should be Add as needed. -->
 ## Unreleased
+
+## 10.0.1 - 2026-10-07
 - Fix toolbar tooltips rendering unstyled
 
 ## 10.0.0 - 2026-10-01
